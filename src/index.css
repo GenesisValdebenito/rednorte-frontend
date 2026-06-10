@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-rn-50 text-rn-800 antialiased;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { @apply bg-rn-100; }
+  ::-webkit-scrollbar-thumb { @apply bg-rn-300 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-rn-400; }
+}
+
+@layer components {
+  /* Tabla base */
+  .rn-table th,
+  .rn-table td {
+    @apply px-4 py-3 text-left;
+  }
+}
